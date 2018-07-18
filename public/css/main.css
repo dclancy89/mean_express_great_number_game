@@ -1,0 +1,11 @@
+div.center * {
+    text-align: center;
+}
+
+div.win {
+    background-color: green;
+}
+
+div.lose {
+    background-color: red;
+}
