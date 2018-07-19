@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link ref="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 
@@ -10,17 +10,13 @@
     <h3>I am thinking of a number between 1 and 100</h3>
     <p>Take a guess!</p>
 
-    <div class="<% if (win) { %>win<% } else { %>lose<% } %>"><%= res %></div>
+    <div class="<% if (win) { %>win<% } else if(win != null) { %>lose<% } %> result"><span><%= res %><a href="/reset">Play again!</a></span></div>
 
-    <form action="/process" method="post">
+    <form action="/process" method="post" class="<% if (win) { %>win<% } %>">
         <input type="text" name="guess" />
         <input type="submit" type="submit" />
     </form>
 </div>
-
-<p>Number: <%= number %></p>
-<p>Res: <%= res %></p>
-<p>Win: <%= win %></p>
 
 
 </body>

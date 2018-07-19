@@ -1,11 +1,45 @@
-div.center * {
+div * {
     text-align: center;
+}
+
+div.result {
+    width: 150px;
+    height: 150px;
+    display: table;
+    margin: 1rem auto;
+}
+
+div.result span {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+}
+
+div.result a {
+    display: none;
 }
 
 div.win {
     background-color: green;
+    border: 2px solid black;
+}
+
+div.result.win a {
+    display: block;
+    margin-top: 1rem;
+    color: yellow;
+    transition: opacity 0.2s ease 0s;
+}
+
+div.result.win a:hover {
+    opacity: 0.7;
 }
 
 div.lose {
     background-color: red;
+    border: 2px solid black;
+}
+
+form.win {
+    display: none;
 }

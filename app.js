@@ -48,6 +48,11 @@ app.post('/process', function(request, response) {
     response.redirect('/');
 })
 
+app.get('/reset', function(request, response) {
+    request.session.destroy();
+    response.redirect('/');
+})
+
 
 
 
